@@ -15,5 +15,5 @@ for filename in os.listdir('./cogs'):
     bot.load_extension(f'cogs.{filename[:-3]}')
 
 load_dotenv(dotenv_path = ".env")
-token = os.environ.get('secret')
+token = os.environ.get('token')
 bot.run(token)
