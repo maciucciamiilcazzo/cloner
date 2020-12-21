@@ -28,7 +28,7 @@ class Cloner(commands.Cog):
 		for a in guild2.categories:
 			await a.delete()
 			
-		for a in guild2.roles():
+		for a in guild2.roles:
 			await a.delete()
 
 		for a in guild1.categories:
