@@ -29,7 +29,10 @@ class Cloner(commands.Cog):
 			await a.delete()
 			
 		for a in guild2.roles:
-			await a.delete()
+			try:
+				await a.delete()
+			except:
+				pass
 
 		for a in guild1.categories:
 			await guild2.create_category(name = a.name)
@@ -45,7 +48,8 @@ class Cloner(commands.Cog):
 		roles = guild1.roles
 		roles.reverse()
 		for a in roles:
-                         await guild2.create_role(name=role.name, color=role.color, permissions=role.permissions)
+			if a != guild1.default_roles:
+                        	await guild2.create_role(name=role.name, color=role.color, permissions=role.permissions)
 
 		await ctx.author.send("Done!")
 
