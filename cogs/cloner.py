@@ -49,7 +49,9 @@ class Cloner(commands.Cog):
 		roles.reverse()
 		for a in roles:
 			if a != guild1.default_roles:
-                        	await guild2.create_role(name=role.name, color=role.color, permissions=role.permissions)
+				await guild2.create_role(name=role.name, color=role.color, permissions=role.permissions)
+			else:
+				await guild2.default_role.edit(permissions=a.permissions)
 
 		await ctx.author.send("Done!")
 
