@@ -1,5 +1,5 @@
 # Cloner
-A Discord bot that clone a guild in another guild.
+A Discord bot that clones a guild in another guild.
 # Setup
 - Install Python from [here](https://www.python.org/downloads/)
 - Go to [Discord Developer](https://discordapp.com/developers/applications/)
